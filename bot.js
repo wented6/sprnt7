@@ -35,7 +35,7 @@ client.on('ready', () => {
 client.on('message', function(message) {
 	const myID = "523224768074219552";
     let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(prefix + "setname")) {
+    if(message.content.startsWith(prefix + "ne")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setUsername(args);
@@ -43,7 +43,7 @@ client.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "setg")) {
+    } else if(message.content.startsWith(prefix + "ply")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setGame(args);
@@ -51,7 +51,7 @@ client.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "لسن")) {
+    } else if(message.content.startsWith(prefix + "ls")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'LISTENING'});
@@ -59,7 +59,7 @@ client.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "setw")) {
+    } else if(message.content.startsWith(prefix + "wt")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'WATCHING'});
@@ -67,7 +67,7 @@ client.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "setava")) {
+    } else if(message.content.startsWith(prefix + "avt")) {
 				        if(message.author.id !== myID) return;
         client.user.setAvatar(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
