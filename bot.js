@@ -90,9 +90,6 @@ client.on('guildMemberAdd', member => {
   if (message.content.startsWith(adminprefix + 'st')) {
     client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
       message.channel.sendMessage(`:white_check_mark: Done!`)
- msg.delete(5000);
- message.delete(5000);
- });
   }
   });
 
