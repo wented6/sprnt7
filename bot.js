@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "M"// البرفكس هنا
+var prefix = "-"// البرفكس هنا
 
 client.on('ready', () => {
   console.log(`تم تسجيل الدخول على ${client.user.tag}!`);
@@ -33,7 +33,7 @@ client.on('ready', () => {
 });
 
 client.on('message', function(message) {
-	const myID = "523224768074219552";
+	const myID = "462503125048360960";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "ne")) {
 		        if(message.author.id !== myID) return;
@@ -43,7 +43,7 @@ client.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "ply")) {
+    } else if(message.content.startsWith(prefix + "pl")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setGame(args);
@@ -77,6 +77,24 @@ client.on('message', function(message) {
         });
     }
 });
+
+
+
+
+
+
+
+
+    console.log("ss");
+client.on('guildMemberAdd', member => {   
+  if (message.content.startsWith(adminprefix + 'st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
+      message.channel.sendMessage(`:white_check_mark: Done!`)
+  }
+  });
+  msg.delete(5000);
+          message.delete(5000);
+        });
 
 
 client.login(process.env.BOT_TOKEN);
