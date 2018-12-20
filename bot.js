@@ -85,13 +85,7 @@ client.on('message', function(message) {
 
 
 
-    console.log("ss");
-client.on('guildMemberAdd', member => {   
-  if (message.content.startsWith(adminprefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
-      message.channel.sendMessage(`:white_check_mark: Done!`)
-  }
-  });
+
 
 
 client.login(process.env.BOT_TOKEN);
